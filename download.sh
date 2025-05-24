@@ -5,7 +5,7 @@ set -e
 RELEASE_DIR="$(dirname "$0")/pathsense-collector-release"
 RELEASE_VERSION="1.0.0"
 RELEASE_FILE_NAME="pathsense-collector-release.tar.gz"
-RELEASE_DOWNLOAD_URL="https://github.com/CBILITY-PathSense/PathSense-Collector/releases/download/$RELEASE_VERSION/$RELEASE_FILE_NAME"
+RELEASE_DOWNLOAD_URL="https://github.com/CBILITY-PathSense/PathSense-Collector-Releases/releases/download/$RELEASE_VERSION/$RELEASE_FILE_NAME"
 
 # Clean old releases
 sudo rm -rf "$RELEASE_DIR"
