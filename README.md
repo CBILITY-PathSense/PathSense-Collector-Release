@@ -6,7 +6,7 @@ Public releases for PathSense collector embedded software. This is designed to b
 
 Run the following command anywhere to download:
 ```sh
-curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Collector-Release/refs/heads/main/download.sh | sh
+curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Collector-Releases/refs/heads/main/download.sh | sh
 ```
 
 Then install with the install script:
