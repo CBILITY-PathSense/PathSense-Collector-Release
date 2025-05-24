@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+# Define variables
+RELEASE_DIR="$(dirname "$0")/pathsense-collector-release"
+RELEASE_VERSION="1.0.0"
+RELEASE_FILE_NAME="pathsense-collector-release.tar.gz"
+RELEASE_DOWNLOAD_URL="https://github.com/CBILITY-PathSense/PathSense-Collector/releases/download/$RELEASE_VERSION/$RELEASE_FILE_NAME"
+
+# Clean old releases
+sudo rm -rf "$RELEASE_DIR"
+sudo rm -f "$(dirname "$0")/pathsense-collector-release.tar.gz"
+
+# Install necessary shared libraries
+echo "=== Installing required packages ==="
+sudo apt-get update >/dev/null
+sudo apt-get install -y --no-install-recommends \
+  git libssl-dev wget tar
+
+# Download the latest release tarball
+echo "=== Downloading release ==="
+wget --no-verbose -O "$(dirname "$0")/$RELEASE_FILE_NAME" "$RELEASE_DOWNLOAD_URL"
+
+# Untar the tarball
+echo "=== Extracting release files ==="
+mkdir -p "$RELEASE_DIR"
+tar -xzf "$RELEASE_FILE_NAME" -C "$RELEASE_DIR" >/dev/null
+rm "$RELEASE_FILE_NAME"
