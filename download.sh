@@ -3,7 +3,7 @@ set -e
 
 # Define variables
 RELEASE_DIR="$(dirname "$0")/pathsense-collector-release"
-RELEASE_VERSION="1.0.0"
+RELEASE_VERSION="1.0.1"
 RELEASE_FILE_NAME="pathsense-collector-release.tar.gz"
 RELEASE_DOWNLOAD_URL="https://github.com/CBILITY-PathSense/PathSense-Collector-Releases/releases/download/$RELEASE_VERSION/$RELEASE_FILE_NAME"
 
